@@ -1,7 +1,8 @@
 (use-modules
     (guix packages)
     (guix gexp)
-    (guix build-system gnu)
+    (guix build-system cmake)
+;    (guix build-system gnu)
     (guix licenses)
     (gnu packages autotools))
 
@@ -11,7 +12,8 @@
     (name "hello")
     (version "auto")
     (source (local-file %source-dir))
-    (build-system gnu-build-system)
+;    (build-system gnu-build-system)
+    (build-system cmake-build-system)
     (native-inputs (list autoconf automake))
     (synopsis "Hello Guix! A trivial example")
     (description "just warming up")
