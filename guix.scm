@@ -2,19 +2,15 @@
     (guix packages)
     (guix gexp)
     (guix build-system cmake)
-;    (guix build-system gnu)
-    (guix licenses)
-    (gnu packages autotools))
+    (guix licenses))
 
 (define %source-dir (dirname (current-filename)))
 
 (package
     (name "hello")
-    (version "auto")
+    (version "cmake")
     (source (local-file %source-dir))
-;    (build-system gnu-build-system)
     (build-system cmake-build-system)
-    (native-inputs (list autoconf automake))
     (synopsis "Hello Guix! A trivial example")
     (description "just warming up")
     (home-page "localhost")
